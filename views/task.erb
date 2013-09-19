@@ -1,0 +1,34 @@
+<section class="task">
+  <h2 class="headline">
+    <%= @task.task %>
+  </h2>
+  <div class="task-single">
+    <h3>Project:</h3>
+    <p class="task-property">
+      <%= @task.project %>
+    </p>
+    <h3>Person:</h3>
+    <p class="task-property">
+      <%= @task.person %>
+    </p>
+    <h3>Context:</h3>
+    <p class="task-property">
+      <%= @task.context %>
+    </p>
+    <h3>Created On:</h3>
+    <p class="task-property">
+      <%= @task.created_on %>
+    </p>
+    <h3>Due On:</h3>
+    <p class="task-property">
+      <%= @task.due_on %>
+    </p>
+  </div>
+<form method="get" action="/task/<%= @task.id %>/edit">
+  <input type="submit" value="Edit Task" class="btn-normal" />
+</form>
+<form method="post" action="/task/<%= @task.id %>">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Remove Task" class="btn-warning" />
+</form>
+</section>

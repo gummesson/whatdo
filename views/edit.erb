@@ -1,0 +1,11 @@
+<section class="edit">
+<form method="post" action="/task/<%= @task.id %>/edit">
+<input type="hidden" name="_method" value="put">
+<input type="text" name="task" value="<%= @task.task %>" />
+  <input type="text" name="person" value="<%= @task.person %>" />
+  <input type="text" name="context" value="<%= @task.context %>" />
+  <input type="text" name="project" value="<%= @task.project %>" />
+  <input type="text" name="due" value="<%= @task.due_on %>" />
+  <input type="submit" value="Update Task" class="btn-normal" />
+</form>
+</section>

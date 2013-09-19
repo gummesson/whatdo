@@ -1,0 +1,31 @@
+<section class="list">
+  <h2 class="headline">
+    Tasks
+  </h2>
+  <ul class="list-main">
+  <% @task.each do |task| %> 
+    <li class="task-master">
+      <a href="/task/<%= task.id %>" title="<%= task.task %>" alt="<%= task.task %>" class="bold">
+        <%= task.task %>
+      </a>
+      <ul>
+        <li class="small">
+          <span class="bold">Project:</span> <%= task.project %>
+        </li>
+        <li class="small">
+          <span class="bold">Person:</span> <%= task.person %>
+        </li>
+        <li class="small">
+          <span class="bold">Context:</span> <%= task.context %>
+        </li>
+        <li class="small">
+          <span class="bold">Created on:</span> <%= task.created_on %>
+        </li>
+        <li class="small">
+          <span class="bold">Due on:</span> <%= task.due_on %>
+        </li>
+      </ul>
+    </li>
+  <% end %>
+  </ul>
+</section>

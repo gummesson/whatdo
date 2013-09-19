@@ -1,0 +1,11 @@
+<% unless @message.nil? %>
+  <%= erb :message, :layout => false %>
+<% end %>
+<section class="actions">
+  <form method="get" action="/add">
+    <input type="submit" value="Add Task" class="btn-normal">
+  </form>
+</section>
+<% unless @task.empty? %>
+  <%= erb :list, :layout => false %>
+<% end %>
